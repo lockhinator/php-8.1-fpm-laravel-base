@@ -28,3 +28,8 @@ RUN  git clone https://github.com/bwoebi/php-uv.git && \
 RUN echo 'extension=uv.so' >> /usr/local/etc/php/php.ini
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt install -y nodejs
+RUN npm install -g npm@8.18.0
+RUN npm install --location=global -y yarn
